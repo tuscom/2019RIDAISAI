@@ -1,7 +1,7 @@
 //大本の部分
 
 int[] window_size = new int[]{500, 300};
-int bg_color = 255;
+int bg_color = 0; //255から勝手に変更
 
 shapebullet_basebullet bb;
 shapebullet_mybullet mb;

@@ -1,10 +1,15 @@
 public class shapebullet_basebullet
 {
   int HP = 1;
-  float x = 0,y = 0;
+  float x = 250,y = 180;
   boolean isDead = false;
   float size = 10;
-  PImage image;
+  PImage image = new PImage();
+  
+  shapebullet_basebullet(){
+    imageMode(CENTER);
+    image = loadImage("shapebullet.png");
+  }
   
   public void upDate(){
     if (isDead)return;
@@ -23,11 +28,11 @@ public class shapebullet_basebullet
   }
   
   void render(){
-    //image(image, x, y, size, size);
+    image(image, x, y, size, size);
   }
   
   void move(){
-  
+  y-=2;
   }
   
 
