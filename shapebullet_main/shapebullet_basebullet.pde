@@ -2,7 +2,7 @@ public class shapebullet_basebullet
 {
   int HP = 1;
   float x = 250,y = 180;
-  boolean isDead = false;
+  public boolean isDead = false;
   float size = 10;
   PImage image = new PImage();
   
