@@ -43,7 +43,6 @@ void keyPressed(){
   if (key != ' ')return;
   if (!sw_fire) return;
   sw_fire = false;
-  println("fire!");
   
   for (int i=0;i<BBs.length;i++){
     if(BBs[i]!=null)continue;

@@ -6,13 +6,19 @@ public class shapebullet_basebullet
   float size = 10;
   PImage image = new PImage();
   
+  float start_mtime = 0;
+  float dead_mtime = 1000;
+  
   shapebullet_basebullet(){
+    start_mtime = millis();
+    
     imageMode(CENTER);
     image = loadImage("shapebullet.png");
   }
   
   public void upDate(){
     if (isDead)return;
+    timerDead();
     render();
     move();
     checkHitWall();
@@ -33,6 +39,10 @@ public class shapebullet_basebullet
   
   void move(){
   y-=2;
+  }
+  
+  void timerDead(){
+    if (dead_mtime < millis() - start_mtime)isDead = true;
   }
   
 
