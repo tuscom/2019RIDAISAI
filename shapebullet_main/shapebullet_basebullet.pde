@@ -1,7 +1,7 @@
 public class shapebullet_basebullet
 {
   int HP = 1;
-  float x = 250,y = 180;
+  double x = 250,y = 180; //floatからdoubleへ
   public boolean isDead = false;
   float size = 10;
   PImage image = new PImage();
@@ -34,11 +34,11 @@ public class shapebullet_basebullet
   }
   
   void render(){
-    image(image, x, y, size, size);
+    image(image, (float)x, (float)y, size, size); //doubleでエラー
   }
   
   void move(){
-  y-=2;
+    y-=2;
   }
   
   void timerDead(){
