@@ -13,7 +13,7 @@ public class shapebullet_object{
   public boolean getIsDead(){return isDead;}
   
   shapebullet_object(){
-  //imageMode(CENTER);
+  imageMode(CENTER);
   image = loadImage("pre_object.png");
   }
   

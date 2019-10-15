@@ -39,9 +39,9 @@ private void collision_bullet(shapebullet_object obj, shapebullet_mybullet bulle
 
 boolean collisionCircleAndCircle(shapebullet_object IObject1, shapebullet_mybullet IObject2)
 {
-  return distance(IObject1.getX(), IObject1.getY(), IObject2.getX(), IObject2.getY()) < (IObject1.getSize() + IObject2.getSize());
+  return distance(IObject1.getX(), IObject1.getY(), IObject2.getX(), IObject2.getY()) < (IObject1.getSize() + IObject2.getSize())*0.5;
 }
 
 float distance(float x1, float y1, float x2, float y2){
-return sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2)) + 0.01;
+return sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2))+0.01;
 }
