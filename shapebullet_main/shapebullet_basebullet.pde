@@ -4,15 +4,20 @@ public class shapebullet_basebullet
   double x = 250,y = 180; //floatからdoubleへ
   public boolean isDead = false;
   float size = 10;
-  PImage image = new PImage();
+  private PImage image = new PImage();
   
   float start_mtime = 0;
   float dead_mtime = 1000;
   
+  public float getX(){return (float)x;}
+  public float getY(){return (float)y;}
+  public float getSize(){return size;}
+  public boolean getIsDead(){return isDead;}
+  
   shapebullet_basebullet(){
     start_mtime = millis();
     
-    imageMode(CENTER);
+    //imageMode(CENTER);
     image = loadImage("shapebullet.png");
   }
   
@@ -45,5 +50,8 @@ public class shapebullet_basebullet
     if (dead_mtime < millis() - start_mtime)isDead = true;
   }
   
+  public void hitPlanet(){
+  
+  }
 
 }
