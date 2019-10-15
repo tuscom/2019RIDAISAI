@@ -1,5 +1,6 @@
 
 public void collision_bullets(shapebullet_object[] objects, shapebullet_mybullet[] bullets){
+  in_collide = false;
   for(int i=0; i<objects.length; i++){
     for(int j=0;j<bullets.length;j++){
       collision_bullet(objects[i], bullets[j]);
@@ -11,6 +12,7 @@ private void collision_bullet(shapebullet_object obj, shapebullet_mybullet bulle
   if (obj != null && bullet != null) if(collisionCircleAndCircle(obj, bullet)){
     bullet.hitPlanet();
     obj.hitPlanet();
+    in_collide = true;
   }
 }
 

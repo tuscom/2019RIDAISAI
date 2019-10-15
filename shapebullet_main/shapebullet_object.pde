@@ -32,6 +32,5 @@ public class shapebullet_object{
   }
   
   public void hitPlanet(){
-    println("object : hit");
   }
 }

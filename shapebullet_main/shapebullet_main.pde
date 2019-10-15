@@ -1,7 +1,9 @@
-//画面設定
+//{画面設定
 int[] window_size = new int[]{500, 300};
 int bg_color = 0; //255から勝手に変更
+//}画面設定
 
+//{弾丸
 //単発処理
 //shapebullet_basebullet bb;
 //shapebullet_mybullet mb;
@@ -11,10 +13,12 @@ char fire_key = ' ';
 boolean sw_fire = true;
 shapebullet_basebullet[] BBs = new shapebullet_basebullet[100];
 shapebullet_mybullet[] MBs = new shapebullet_mybullet[100]; //mybuuletの分も追加
+//}弾丸
 
-//オブジェクト
+//{オブジェクト
 shapebullet_object[] objects = new shapebullet_object[100];
-
+public boolean in_collide = false;
+//}オブジェクト
 void settings(){
   size(window_size[0], window_size[1]);
 }
@@ -61,6 +65,7 @@ void draw(){
   checkDead(objects);
   upDateObject(objects);
   collision_bullets(objects, MBs);
+  CheckCollision();
   //}オブジェクト
 }
 
@@ -119,4 +124,9 @@ private void upDateObject(shapebullet_object IBaseObject[]){
     IBaseObject[i].upDate();
   }
 }
+
+void CheckCollision(){
+  text(String.format("Collide : %b", in_collide), 10, 20);
+}
+
 //}draw - オブジェクト
