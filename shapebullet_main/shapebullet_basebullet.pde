@@ -7,7 +7,7 @@ public class shapebullet_basebullet
   PImage image = new PImage();
   
   float start_mtime = 0;
-  float dead_mtime = 1000;
+  float dead_mtime = 2000; //勝手に2000に
   
   shapebullet_basebullet(){
     start_mtime = millis();
