@@ -29,8 +29,8 @@ public class pl39_chara{
   }
   
   protected void move(){
-    vx = key_xy[0] * speed;
-    vy = key_xy[1] * speed;
+    vx = my_key.key_xy[0] * speed;
+    vy = my_key.key_xy[1] * speed;
     x+=vx;
     y+=vy;
   }
